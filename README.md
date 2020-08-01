@@ -12,3 +12,5 @@ Refer https://developers.google.com/maps/documentation/maps-static/start to know
 # Usage
 map_image_download.py -c Coordinates.csv -o C:\\Downloads
 
+Where -c is path to the csv file with coordinate values, -o is path to folder where images will be saved
+
