@@ -8,11 +8,15 @@ map_scale = 1
 map_type = 'satellite'
 gmap_api_key = 'INSERT-YOUR-KEY-HERE'
 
+# Create Google Maps URL
 url = "https://maps.googleapis.com/maps/api/staticmap?center={0},{1}&zoom={2}&size={3}x{3}&scale={4}&maptype={5}&key={6}".format(
     latitude, longitude, map_zoom, image_size, map_scale, map_type, gmap_api_key
 )
 
+# Get the map image from the URL 
 logo = imutils.url_to_image(url)
 cv2.imshow("URL to Image", logo)
+
+# Write the map image
 cv2.imwrite("image.png", logo)
 cv2.waitKey(0)
