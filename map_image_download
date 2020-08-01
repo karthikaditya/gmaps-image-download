@@ -51,6 +51,9 @@ if __name__ == '__main__':
     # -----------------------------------------------------------
 
     # Batch map images download
-    csv_path = "C:\\Coordinates.csv"
-    output_folder = "C:\\Downloads"
-    batch_save_map_images(csv_path, output_folder)
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-c", "--csv_path", required=True, help="path to the coordinates csv file")
+    ap.add_argument("-o", "--output_folder", required=True, help="path to output folder to save map images")
+
+    args = vars(ap.parse_args())
+    batch_save_map_images(args["csv_path"], args["output_folder"])
