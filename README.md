@@ -8,3 +8,7 @@ A URL corresponding to the coordinates of location of interest is created. The U
 To download map images in batch mode, use the Coordinates.csv and modify the coordinate values as required.
 
 Refer https://developers.google.com/maps/documentation/maps-static/start to know about the map parameters to use construct the URL.
+
+# Usage
+map_image_download.py -c Coordinates.csv -o C:\\Downloads
+
